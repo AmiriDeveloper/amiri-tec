@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:tec/splash_screen.dart';
-import 'package:flutter_native_splash/flutter_native_splash.dart';
 
-//import 'package:tec/gen/assets.gen.dart';
 void main() {
   runApp(MyApp());
 }

@@ -21,8 +21,8 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  build_runner:
-  flutter_gen_runner:
+ # build_runner:
+  #flutter_gen_runner:
 
 
 
@@ -39,7 +39,7 @@ flutter_native_splash:
   # of your splash screen to a solid color.  Use background_image to set the background of your
   # splash screen to a png image.  This is useful for gradients. The image will be stretch to the
   # size of the app. Only one parameter can be used, color and background_image cannot both be set.
-  color: "#42a5f5"
+  color: "#ffffff"
   #background_image: "assets/background.png"
 
   # Optional parameters are listed below.  To enable a parameter, uncomment the line by removing
@@ -160,13 +160,13 @@ flutter:
 
   
   # example:
- # fonts:
-   # - family: Simplified Arabic
-  #    fonts:
-   #     - asset: fonts/SIMPBDO.ttf
-   #       weight: 700
-   #     - asset: fonts/SIMPO.ttf
-   #       weight: 300
+  fonts:
+    - family: Simplified Arabic
+      fonts:
+        - asset: fonts/SIMPBDO.ttf
+          weight: 700
+        - asset: fonts/SIMPO.ttf
+          weight: 300
   #         style: italic
   #   - family: Trajan Pro
   #     fonts:

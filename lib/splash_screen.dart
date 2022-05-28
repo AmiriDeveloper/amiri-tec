@@ -29,6 +29,3 @@ class splashScreen extends StatelessWidget {
   }
 }
 
-class Assets {
-  static var images;
-}
