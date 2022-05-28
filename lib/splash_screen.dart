@@ -1,9 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:tec/gen/assets.gen.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:flutter_native_splash/flutter_native_splash.dart';
+import 'package:tec/main_screen.dart';
+import 'package:tec/my_colors.dart';
 
-class splashScreen extends StatelessWidget {
+class splashScreen extends StatefulWidget {
+  @override
+  State<splashScreen> createState() => _splashScreenState();
+}
+
+class _splashScreenState extends State<splashScreen> {
+  @override
+  void initState() {
+    Future.delayed(Duration(seconds: 3)).then((value) {
+      Navigator.of(context)
+          .push(MaterialPageRoute(builder: (context) => MainScreen()));
+    });
+
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -13,14 +29,17 @@ class splashScreen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image(
-                image: Assets.images.logo,
-                height: 64,
+              Image.asset(
+                'assets/images/logo.png',
+                height: 32,
               ),
-              /*  const spinkit = SpinKitRotatingCircle(
-  color: Colors.white,
-  size: 50.0,
-),*/
+              SizedBox(
+                height: 32,
+              ),
+              SpinKitFadingCube(
+                color: solidColors.primeryColor,
+                size: 32.0,
+              ),
             ],
           ),
         ),
@@ -28,4 +47,3 @@ class splashScreen extends StatelessWidget {
     );
   }
 }
-
