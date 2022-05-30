@@ -20,7 +20,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
- # build_runner:
+  build_runner:
   flutter_gen_runner:
 
 
@@ -37,13 +37,11 @@ flutter:
 
  
   # example:
- # fonts:
- #   - family: dana
-  #    fonts:
-   #     - asset: fonts/Dana-Regular.ttf
-    #      weight: 300
-     #   - asset: fonts/Dana-Bold.ttf
-      #    weight: 700
+  fonts:
+    - family: Dana
+      fonts:
+        - asset: fonts/Dana-Regular.ttf
+        - asset: fonts/Dana-Bold.ttf
           
   #         style: italic
   #   - family: Trajan Pro

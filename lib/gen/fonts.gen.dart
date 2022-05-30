@@ -10,6 +10,6 @@
 class FontFamily {
   FontFamily._();
 
-  /// Font family: Simplified Arabic
-  static const String dana = 'dana';
+  /// Font family: Dana
+  static const String dana = 'Dana';
 }

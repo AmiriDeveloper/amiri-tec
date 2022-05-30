@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:tec/gen/assets.gen.dart';
-import 'package:tec/my_colors.dart';
 
 class MainScreen extends StatelessWidget {
   @override
@@ -8,11 +7,16 @@ class MainScreen extends StatelessWidget {
     // TODO: implement build
     return Scaffold(
       body: SafeArea(
-        child: Center(
-          child: Text(
-            "main screen",
-            style: TextStyle(color: solidColors.colorTitle),
-          ),
+        child: Column(
+          children: [
+            Row(
+              children: [
+                Icon(Icons.menu),
+                Image.asset('assets.images.logo.png', height: 20),
+                Icon(Icons.search),
+              ],
+            ),
+          ],
         ),
       ),
     );
