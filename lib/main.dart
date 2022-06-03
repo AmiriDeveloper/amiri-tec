@@ -32,18 +32,18 @@ class MyApp extends StatelessWidget {
             headline1: TextStyle(
                 fontFamily: 'Dana',
                 fontSize: 19,
-                color: solidColors.posterTitle,
+                color: solidColors.posterTitle_white10,
                 fontWeight: FontWeight.w800),
-
-            subtitle1:TextStyle(
+            subtitle1: TextStyle(
                 fontFamily: 'Dana',
                 fontSize: 15,
-                color: solidColors.scaffoldBG,
+                color: solidColors.scaffoldBG_white,
                 fontWeight: FontWeight.w500),
             bodyText1: TextStyle(
                 fontFamily: 'Dana',
                 fontSize: 13,
-                fontWeight: FontWeight.w300),
+                fontWeight: FontWeight.w300,
+                color: solidColors.colorTitle_blue),
             headline2: TextStyle(
                 fontFamily: 'Dana',
                 fontSize: 14,

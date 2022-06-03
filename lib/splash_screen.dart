@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:tec/gen/assets.gen.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:tec/main_screen.dart';
 import 'package:tec/my_colors.dart';
@@ -37,7 +36,7 @@ class _splashScreenState extends State<splashScreen> {
                 height: 32,
               ),
               SpinKitFadingCube(
-                color: solidColors.primeryColor,
+                color: solidColors.primeryColor_purple,
                 size: 32.0,
               ),
             ],

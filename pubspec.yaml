@@ -34,15 +34,18 @@ flutter:
   assets:
     - assets/images/logo.png
     - assets/images/skynews.jpg
+    - assets/images/pencil-xxl.png
+    - assets/images/hashtagicon.png
+    - assets/images/blue_pen.png
 
 
  
   # example:
-  fonts:
-    - family: Dana
-      fonts:
-        - asset: fonts/Dana-Regular.ttf
-        - asset: fonts/Dana-Bold.ttf
+#  fonts:
+#    - family: Dana
+#      fonts:
+#        - asset: fonts/DANA-REGULAR.ttf
+#        - asset: fonts/Dana-Bold.ttf
           
   #         style: italic
   #   - family: Trajan Pro
