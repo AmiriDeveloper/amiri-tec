@@ -37,6 +37,11 @@ flutter:
     - assets/images/pencil-xxl.png
     - assets/images/hashtagicon.png
     - assets/images/blue_pen.png
+    - assets/images/microphon.png
+    - assets/images/user.png
+    - assets/images/home.png
+    - assets/images/write.png
+
 
 
  

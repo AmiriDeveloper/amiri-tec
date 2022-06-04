@@ -1,35 +1,31 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:tec/fack_data.dart';
+import 'package:tec/models_main/fack_data.dart';
 import 'package:tec/my_colors.dart';
 import 'package:tec/my_string.dart';
 import 'package:tec/models_main/basic_data.dart';
 
-class MainScreen extends StatelessWidget {
+class homeScreen extends StatelessWidget {
+  const homeScreen({
+    Key? key,
+    required this.size,
+    required this.theme,
+    required this.bodyMargin,
+  }) : super(key: key);
+
+  final Size size;
+  final TextTheme theme;
+  final double bodyMargin;
+
   @override
   Widget build(BuildContext context) {
-    var theme = Theme.of(context).textTheme;
-    var size = MediaQuery.of(context).size;
-    double bodyMargin = size.width / 10;
-
-    // TODO: implement build
-    return Scaffold(
-      body: Padding(
+    return SingleChildScrollView(
+      physics: BouncingScrollPhysics(),
+      child: Padding(
         padding: const EdgeInsets.fromLTRB(0, 16, 0, 0),
         child: SafeArea(
           child: Column(
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Icon(Icons.menu),
-                  Image.asset(
-                    'assets/images/logo.png',
-                    height: 70,
-                    width: 90,
-                  ),
-                  Icon(Icons.search),
-                ],
-              ),
               SizedBox(
                 height: 8,
               ),
@@ -133,16 +129,15 @@ class MainScreen extends StatelessWidget {
                       );
                     })),
               ),
-
+              /////////////------------ TITLE 1 ----------////////////
               SizedBox(height: 30, width: 30),
               Padding(
                   padding: EdgeInsets.only(right: bodyMargin, bottom: 8),
                   child: Row(
                     children: [
-                      Icon(
-                        Icons.person,
-                        /* Image.asset(
-                        'assets/images/blue_pen.png',*/
+                      Image.asset(
+                        'assets/images/blue_pen.png',
+                        height: 20,
                         color: solidColors.colorTitle_blue,
                       ),
                       Text(
@@ -151,6 +146,7 @@ class MainScreen extends StatelessWidget {
                       )
                     ],
                   )),
+              /////////////--------- STACK 1 --------//////////////
               SizedBox(
                 height: size.height / 3.1,
                 child: ListView.builder(
@@ -184,8 +180,7 @@ class MainScreen extends StatelessWidget {
                                           begin: Alignment.bottomCenter,
                                           end: Alignment.topCenter)),
                                 ),
-
-                                //////-------- the position of write in the Container---////
+                                //--- the position of write in the Container---//
                                 Positioned(
                                   left: 4,
                                   right: 4,
@@ -227,8 +222,79 @@ class MainScreen extends StatelessWidget {
                       );
                     }),
               ),
-              /////////////////////////////////////////////////////////////////////////////////////////
-              Row()
+              //////////----------------- TITLE 2  ------------------////////////
+              SizedBox(height: 30, width: 30),
+              Padding(
+                padding: EdgeInsets.only(right: bodyMargin, bottom: 8),
+                child: Row(
+                  children: [
+                    Icon(
+                      CupertinoIcons.mic,
+                      /* Image.asset(
+                      "assets/Images/microphon.png",*/
+                      color: solidColors.colorTitle_blue,
+                    ),
+                    Text(
+                      myString.viewHotestPodCasts,
+                      style: theme.bodyText1,
+                    )
+                  ],
+                ),
+              ),
+              //////////----------------- STACK 2 ------------------////////////
+
+              SizedBox(
+                height: size.height / 3.1,
+                child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    itemCount: podcastList.length,
+                    itemBuilder: ((contex, index) {
+                      return Padding(
+                        padding: EdgeInsets.only(
+                            right: index == 0 ? bodyMargin : 15),
+                        child: Column(
+                          children: [
+                            SizedBox(
+                              height: size.height / 4.30,
+                              width: size.width / 2.5,
+                              child: Stack(children: [
+                                Container(
+                                  decoration: BoxDecoration(
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(16)),
+                                    image: DecorationImage(
+                                        image: NetworkImage(
+                                            podcastList[index].imageUrl),
+                                        fit: BoxFit.cover),
+                                  ),
+                                  foregroundDecoration: BoxDecoration(
+                                      borderRadius:
+                                          BorderRadius.all(Radius.circular(16)),
+                                      gradient: LinearGradient(
+                                          colors: gradiantColrs.blog,
+                                          begin: Alignment.bottomCenter,
+                                          end: Alignment.topCenter)),
+                                ),
+                              ]),
+                            ),
+                            SizedBox(
+                              height: 5,
+                            ),
+                            SizedBox(
+                              width: size.width / 2.5,
+                              child: Text(
+                                podcastList[index].title,
+                                style: theme.headline4,
+                              ),
+                            ),
+                          ],
+                        ),
+                      );
+                    })),
+              ),
+              SizedBox(
+                height: 60,
+              )
             ],
           ),
         ),

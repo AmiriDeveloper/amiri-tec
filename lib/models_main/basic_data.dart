@@ -1,11 +1,11 @@
-import '../fack_data.dart';
+import 'fack_data.dart';
 
 List<BlogModel> blogList = [
   BlogModel(
       id: 1,
       title: "آیا فضا در جایی به پایان می‌رسد؟",
       imageUrl:
-          "https://media.ana.press/old/1399/07/13/637374151880559530_lg.jpg",
+          "https://parispeaceforum.org/wp-content/uploads/2021/10/NET-ZERO-SPACE-INITIATIVE-1.png",
       content:
           """اگر ستاره‌ها را مثل خانه در نظر بگیریم، کهکشان‌ها مثل شهرهای پر از خانه هستند. دانشمندان تخمین می‌زنند که فقط صد میلیارد ستاره در کهکشان راه شیری که میزبان سیاره ما زمین است وجود دارد.
 
@@ -110,4 +110,61 @@ List<BlogModel> blogList = [
       views: "370",
       writerImageUrl: "h",
       writer: "عاطفه علیپور")
+];
+
+List<PodcastModel> podcastList = [
+  PodcastModel(
+      id: 1,
+      imageUrl:
+          "https://imgv3.fotor.com/images/homepage-feature-card/Fotor-AI-photo-enhancement-tool.jpg",
+      title: "دارما پادکست",
+      writer: "الهه رعوفی"),
+  PodcastModel(
+      id: 2,
+      imageUrl:
+          "https://picjumbo.com/wp-content/uploads/woman-holding-an-american-flag-in-a-field-free-photo-1080x1620.jpg",
+      title: " پادکست فضا",
+      writer: "محمد رعوفی"),
+  PodcastModel(
+      id: 3,
+      imageUrl:
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPqo7Mj_V_rBe5-dOCFrvLcIehnRWb1LA20g&usqp=CAU",
+      title: " مکست",
+      writer: "امیر رعوفی"),
+  PodcastModel(
+      id: 4,
+      imageUrl:
+          "https://images.ctfassets.net/6m9bd13t776q/3kQerwaiPZg0MYmFTBWb2g/57e84805ed3348ae67ee2ef8478ea224/maternity-photo-ideas-pregnant-baby-animal-750x550.jpg?q=75",
+      title: "دارما پادکست",
+      writer: "الهه رعوفی"),
+  PodcastModel(
+      id: 5,
+      imageUrl:
+          "https://cloudfront-us-east-2.images.arcpublishing.com/reuters/F6INOOMSRRL5XOOQDRPZUWPWBA.jpg",
+      title: " پادکست فضا",
+      writer: "محمد رعوفی"),
+  PodcastModel(
+      id: 6,
+      imageUrl:
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzTTInJfqIMsT7mqPBrV7WzLwQFMqw3ISwRg&usqp=CAU",
+      title: " مکست",
+      writer: "امیر رعوفی"),
+  PodcastModel(
+      id: 7,
+      imageUrl:
+          "https://photo-net-production-images.s3.amazonaws.com/18581316-lg.jpg",
+      title: "دارما پادکست",
+      writer: "الهه رعوفی"),
+  PodcastModel(
+      id: 8,
+      imageUrl:
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJISlJx0WwSdY7Znf3bvuYP6aiC9BU8uDVYg&usqp=CAU",
+      title: " پادکست فضا",
+      writer: "محمد رعوفی"),
+  PodcastModel(
+      id: 9,
+      imageUrl:
+          "https://static.toiimg.com/thumb/msid-31346158,width-748,height-499,resizemode=4,imgsize-114461/.jpg",
+      title: " مکست",
+      writer: "امیر رعوفی"),
 ];
