@@ -9,6 +9,7 @@ class solidColors {
   static const Color selectedPodCast_orang = Color.fromARGB(255, 255, 139, 26);
   static const Color submitArticle_white = Color.fromARGB(255, 209, 209, 209);
   static const Color submitPodCast_white20 = Color.fromARGB(255, 246, 246, 246);
+  static const Color DividerColor = Color.fromARGB(255, 112, 112, 112);
   static const Color subText_white30 = Color.fromARGB(255, 197, 197, 197);
 }
 

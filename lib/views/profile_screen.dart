@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:tec/models_main/my_component.dart';
 import 'package:tec/my_colors.dart';
+import 'package:tec/my_string.dart';
 
 class profileScreen extends StatelessWidget {
   const profileScreen({
@@ -29,17 +31,79 @@ class profileScreen extends StatelessWidget {
               height: 10,
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Image.asset(
                   'assets/images/blue_pen.png',
                   color: solidColors.colorTitle_blue,
-                  height: 30,
+                  height: 20,
                 ),
                 Text(
                   'ویرایش عکس پروفایل',
                   style: theme.bodyText1,
-                )
+                ),
               ],
+            ),
+            SizedBox(
+              height: 60,
+            ),
+            Text(
+              ' فاطمه امیری',
+              style: theme.headline4,
+            ),
+            Text(
+              'fatemahamiri@gmail.com',
+              style: theme.headline4,
+            ),
+            SizedBox(
+              height: 60,
+            ),
+            techDevider(size: size),
+            /////////1
+            InkWell(
+                onTap: (() {}),
+                splashColor: solidColors.primeryColor_purple,
+                child: SizedBox(
+                  height: 50,
+                  child: Center(
+                    child: Text(
+                      myString.favoritBlig,
+                      style: theme.headline4,
+                    ),
+                  ),
+                )),
+            techDevider(
+              size: size,
+            ),
+            ////////2
+            InkWell(
+                onTap: (() {}),
+                splashColor: solidColors.primeryColor_purple,
+                child: SizedBox(
+                  height: 50,
+                  child: Center(
+                    child: Text(
+                      myString.favoritPodcasts,
+                      style: theme.headline4,
+                    ),
+                  ),
+                )),
+            techDevider(size: size),
+            //////////3
+            InkWell(
+                onTap: (() {}),
+                splashColor: solidColors.primeryColor_purple,
+                child: SizedBox(
+                  height: 50,
+                  child: Center(
+                    child: Text(
+                      myString.logOut,
+                      style: theme.headline4,
+                    ),
+                  ),
+                )),
+            SizedBox(
+              height: 60,
             )
           ],
         ));

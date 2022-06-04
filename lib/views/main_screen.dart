@@ -6,12 +6,25 @@ import 'package:tec/models_main/basic_data.dart';
 import 'package:tec/views/home_scren.dart';
 import 'package:tec/views/profile_screen.dart';
 
-class MainScreen extends StatelessWidget {
+class MainScreen extends StatefulWidget {
+  @override
+  State<MainScreen> createState() => _MainScreenState();
+}
+
+class _MainScreenState extends State<MainScreen> {
+  var selectedPageIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     var theme = Theme.of(context).textTheme;
     var size = MediaQuery.of(context).size;
     double bodyMargin = size.width / 10;
+
+    List<Widget> tecViewMainScrenPages = [
+      homeScreen(size: size, theme: theme, bodyMargin: bodyMargin),
+      homeScreen(size: size, theme: theme, bodyMargin: bodyMargin),
+      profileScreen(size: size, theme: theme, bodyMargin: bodyMargin),
+    ];
 
     // TODO: implement build
     return Scaffold(
@@ -41,9 +54,18 @@ class MainScreen extends StatelessWidget {
       ),
       body: Stack(children: [
         Positioned.fill(
-            child:
-                homeScreen(size: size, theme: theme, bodyMargin: bodyMargin)),
-        BottonNavigation(size: size, bodyMargin: bodyMargin),
+            child: Center(
+          child: tecViewMainScrenPages[selectedPageIndex],
+        )),
+        BottonNavigation(
+          size: size,
+          bodyMargin: bodyMargin,
+          changeScreen: (int Value) {
+            setState(() {
+              selectedPageIndex = Value;
+            });
+          },
+        ),
       ]),
     );
   }
@@ -54,10 +76,12 @@ class BottonNavigation extends StatelessWidget {
     Key? key,
     required this.size,
     required this.bodyMargin,
+    required this.changeScreen,
   }) : super(key: key);
 
   final Size size;
   final double bodyMargin;
+  final Function(int) changeScreen;
 
   @override
   Widget build(BuildContext context) {
@@ -84,19 +108,19 @@ class BottonNavigation extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   IconButton(
-                      onPressed: (() {}),
+                      onPressed: (() => changeScreen(0)),
                       icon: Image.asset(
                         "assets/images/home.png",
                         color: Colors.white,
                       )),
                   IconButton(
-                      onPressed: (() {}),
+                      onPressed: (() => changeScreen(1)),
                       icon: Image.asset(
                         "assets/images/write.png",
                         color: Colors.white,
                       )),
                   IconButton(
-                      onPressed: (() {}),
+                      onPressed: (() => changeScreen(2)),
                       icon: Image.asset(
                         "assets/images/user.png",
                         color: Colors.white,
