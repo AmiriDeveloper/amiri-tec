@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:tec/models_main/my_component.dart';
-import 'package:tec/my_colors.dart';
-import 'package:tec/my_string.dart';
+import 'package:tec/component/my_component.dart';
+import 'package:tec/component/my_colors.dart';
+import 'package:tec/component/my_string.dart';
 
 class profileScreen extends StatelessWidget {
   const profileScreen({

@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:tec/models_main/fack_data.dart';
-import 'package:tec/my_colors.dart';
-import 'package:tec/my_string.dart';
-import 'package:tec/models_main/basic_data.dart';
+import 'package:tec/model/fack_data.dart';
+import 'package:tec/component/my_colors.dart';
+import 'package:tec/component/my_string.dart';
+import 'package:tec/model/basic_data.dart';
 
 class homeScreen extends StatelessWidget {
   const homeScreen({
