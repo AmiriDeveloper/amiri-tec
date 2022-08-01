@@ -20,28 +20,6 @@ List<HashTagModel> tagList = [
   HashTagModel(title: "دارت"),
 ];
 
-class BlogModel {
-  int id;
-  String imageUrl;
-  String title;
-  String writer;
-  String writerImageUrl;
-  String data;
-  String content;
-  String views;
-
-  BlogModel({
-    required this.id,
-    required this.title,
-    required this.imageUrl,
-    required this.content,
-    required this.data,
-    required this.views,
-    required this.writerImageUrl,
-    required this.writer,
-  });
-}
-
 class PodcastModel {
   int id;
   String imageUrl;
@@ -55,3 +33,7 @@ class PodcastModel {
     required this.writer,
   });
 }
+//----------------------------------------------
+//blog fake data
+
+List<HashTagModel> selectedTags = [];

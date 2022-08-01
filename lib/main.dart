@@ -7,11 +7,11 @@ import 'package:tec/views/splash_screen.dart';
 void main() {
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light);
 
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  MyApp({Key? key}) : super(key: key);
+  const MyApp({Key? key}) : super(key: key);
 
   // This widget is the root of your application.
   @override
@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
             headline1: TextStyle(
                 fontFamily: 'Dana',
                 fontSize: 19,
-                color: solidColors.posterTitle_white10,
+                color: SolidColors.posterTitlewhite10,
                 fontWeight: FontWeight.w800),
             headline2: TextStyle(
                 fontFamily: 'Dana',
@@ -43,20 +43,20 @@ class MyApp extends StatelessWidget {
                 fontFamily: 'Dana',
                 fontSize: 20,
                 fontWeight: FontWeight.w700,
-                color: solidColors.textTitle_black),
+                color: SolidColors.textTitleblack),
             subtitle1: TextStyle(
                 fontFamily: 'Dana',
                 fontSize: 13,
-                color: solidColors.scaffoldBG_white,
+                color: SolidColors.scaffoldBGwhite,
                 fontWeight: FontWeight.w500),
             bodyText1: TextStyle(
                 fontFamily: 'Dana',
                 fontSize: 13,
                 fontWeight: FontWeight.w300,
-                color: solidColors.colorTitle_blue),
+                color: SolidColors.colorTitleblue),
           )),
       debugShowCheckedModeBanner: false,
-      home: splashScreen(),
+      home: const SplashScreen(),
     );
   }
 }

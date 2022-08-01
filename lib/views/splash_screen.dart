@@ -1,19 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:tec/views/main_screen.dart';
 import 'package:tec/component/my_colors.dart';
+import 'package:tec/views/main_screen.dart';
 
-class splashScreen extends StatefulWidget {
+class SplashScreen extends StatefulWidget {
+  const SplashScreen({Key? key}) : super(key: key);
+
   @override
-  State<splashScreen> createState() => _splashScreenState();
+  State<SplashScreen> createState() => _SplashScreenState();
 }
 
-class _splashScreenState extends State<splashScreen> {
+class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
-    Future.delayed(Duration(seconds: 3)).then((value) {
+    Future.delayed(const Duration(seconds: 3)).then((value) {
       Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (context) => MainScreen()));
+          MaterialPageRoute(builder: (context) => const MainScreen()));
     });
 
     super.initState();
@@ -21,26 +23,19 @@ class _splashScreenState extends State<splashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    return Scaffold(
-      body: SafeArea(
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Image.asset(
-                'assets/images/logo.png',
-                height: 32,
-              ),
-              SizedBox(
-                height: 32,
-              ),
-              SpinKitFadingCube(
-                color: solidColors.primeryColor_purple,
-                size: 32.0,
-              ),
-            ],
-          ),
+    return SafeArea(
+      child: Scaffold(
+        body: Center(
+          child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+            Image.asset("assets/images/logo.png", height: 64),
+            const SizedBox(
+              height: 32,
+            ),
+            const SpinKitFadingCube(
+              color: SolidColors.primeryColorpurple,
+              size: 32.0,
+            )
+          ]),
         ),
       ),
     );

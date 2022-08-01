@@ -16,12 +16,15 @@ dependencies:
     sdk: flutter         # Add this line
   cupertino_icons: ^1.0.2
   flutter_spinkit: ^5.1.0
+  get: ^4.6.5
+  share_plus: ^4.0.10
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   build_runner:
   flutter_gen_runner:
+  flutter_lints: ^2.0.1
 
 
 
@@ -41,6 +44,7 @@ flutter:
     - assets/images/user.png
     - assets/images/home.png
     - assets/images/write.png
+    - assets/images/bot.jpg
 
 
 

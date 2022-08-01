@@ -1,5 +1,27 @@
 import 'fack_data.dart';
 
+class BlogModel {
+  int id;
+  String imageUrl;
+  String title;
+  String writer;
+  String writerImageUrl;
+  String data;
+  String content;
+  String views;
+
+  BlogModel({
+    required this.id,
+    required this.title,
+    required this.imageUrl,
+    required this.content,
+    required this.data,
+    required this.views,
+    required this.writerImageUrl,
+    required this.writer,
+  });
+}
+
 List<BlogModel> blogList = [
   BlogModel(
       id: 1,
