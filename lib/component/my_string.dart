@@ -10,6 +10,8 @@ class MyString {
 }
 
 class MyStrings {
+  static const String tecblogUrl =
+      "https://github.com/sasansafari/techblog/tree/master";
   static const String viewHotestBlog = "مشاهده داغ ترین نوشته ها ";
   static const String viewHotestPodCasts = "مشاهده داغ ترین پادکست ها";
   static const String relatedArticle = "نوشته های مرتبط";
@@ -26,6 +28,10 @@ class MyStrings {
 
 برای ارسال مطلب و پادکست باید حتما 
 ثبت نام کنی """;
+  static const String shareText =
+      """به تک‌بلاگ خوش اومد باید حتما ثبت نام کنی  \n
+ www.sasansafari.com
+ """;
 
   static const String successfulRegistration = """
 تبریک میگم ، ایمیل با موفقیت تایید شد

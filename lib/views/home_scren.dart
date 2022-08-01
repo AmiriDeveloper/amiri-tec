@@ -31,13 +31,13 @@ class HomeScreen extends StatelessWidget {
             ),
             HomePageTagList(bodyMargin: bodyMargin, textTheme: textTheme),
             const SizedBox(
-              height: 32,
+              height: 30,
             ),
             SeeMoreBlog(bodyMargin: bodyMargin, textTheme: textTheme),
             HomePageBlogList(
                 size: size, bodyMargin: bodyMargin, textTheme: textTheme),
             const SizedBox(
-              height: 32,
+              height: 30,
             ),
             SeeMorePodcast(bodyMargin: bodyMargin, textTheme: textTheme),
             HomePagePodcastList(size: size, bodyMargin: bodyMargin),
@@ -173,7 +173,7 @@ class HomePageBlogList extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: SizedBox(
-                      height: size.height / 5.3,
+                      height: size.height / 5.6,
                       width: size.width / 2.4,
                       child: Stack(
                         children: [
@@ -259,7 +259,7 @@ class SeeMoreBlog extends StatelessWidget {
       child: Row(
         children: [
           SizedBox(
-            height: 15,
+            height: 18,
             child: Image.asset(
               "assets/images/blue_pen.png",
               color: SolidColors.colorTitleblue,

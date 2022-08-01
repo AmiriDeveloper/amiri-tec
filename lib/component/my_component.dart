@@ -1,6 +1,9 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:tec/component/my_colors.dart';
 import 'package:tec/model/fack_data.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class TechDevider extends StatelessWidget {
   const TechDevider({
@@ -61,5 +64,14 @@ class MainTags extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+myLaunchUrl(String url) async {
+  var uri = Uri.parse(url);
+  if (await canLaunchUrl(uri)) {
+    await launchUrl(uri);
+  } else {
+    log("could not ${url.toString()}");
   }
 }
