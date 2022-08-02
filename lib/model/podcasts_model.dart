@@ -1,15 +1,3 @@
-class Postrer {
-  String? id, title, image;
-
-  Postrer({required this.id, required this.title, required this.image});
-
-  Postrer.fromJson(Map<String, dynamic> element2) {
-    id = element2["id"];
-    title = element2["title"];
-    image = element2["image"];
-  }
-}
-
 class TopPodcasts {
   String? id, title, poster, publisher, view, createAt;
 
@@ -29,16 +17,5 @@ class TopPodcasts {
     publisher = element2["publisher"];
     view = element2["view"];
     createAt = element2["created_at"];
-  }
-}
-
-class TagsModel {
-  String? id, title;
-
-  TagsModel({required this.id, required this.title});
-
-  TagsModel.fromJson(Map<String, dynamic> element2) {
-    id = element2["id"];
-    title = element2["title"];
   }
 }

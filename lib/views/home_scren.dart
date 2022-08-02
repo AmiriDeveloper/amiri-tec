@@ -1,17 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:tec/component/my_colors.dart';
 import 'package:tec/component/my_component.dart';
 import 'package:tec/component/my_string.dart';
+import 'package:tec/controller/home_screen_controler.dart';
 import 'package:tec/model/fack_data.dart';
 import '../model/basic_data.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({
+  HomeScreen({
     Key? key,
     required this.size,
     required this.textTheme,
     required this.bodyMargin,
   }) : super(key: key);
+
+  HomeScreenContriller homeScreenContriller = Get.put(HomeScreenContriller());
 
   final Size size;
   final TextTheme textTheme;
