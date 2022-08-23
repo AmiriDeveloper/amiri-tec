@@ -5,13 +5,17 @@ import 'package:tec/component/my_component.dart';
 import 'package:tec/component/my_string.dart';
 import 'package:tec/gen/assets.gen.dart';
 import 'package:tec/service/dio_service.dart';
-import 'package:tec/views/home_scren.dart';
-import 'package:tec/views/profile_screen.dart';
+import 'package:tec/views/main_screen/home_scren.dart';
+import 'package:tec/views/main_screen/profile_screen.dart';
 import 'package:get/get.dart';
 import 'package:tec/component/api_constant.dart';
+import 'package:tec/views/register_intro.dart';
+
+import '../my_cats.dart';
 
 final GlobalKey<ScaffoldState> _key = GlobalKey();
 
+// ignore: must_be_immutable
 class MainScreen extends StatelessWidget {
   MainScreen({Key? key}) : super(key: key);
 
@@ -124,7 +128,8 @@ class MainScreen extends StatelessWidget {
                       size: size,
                       textTheme: textTheme,
                       bodyMargin: bodyMargin), //0
-                  const ProfileScreen() //1
+                  const MyCats(), //1
+                  const ProfileScreen() //2
                 ],
               ),
             )),
@@ -187,13 +192,13 @@ class BottomNavigation extends StatelessWidget {
                       color: Colors.white,
                     )),
                 IconButton(
-                    onPressed: (() {}),
+                    onPressed: (() => changeScreen(1)),
                     icon: Image.asset(
                       "assets/images/write.png",
                       color: Colors.white,
                     )),
                 IconButton(
-                    onPressed: (() => changeScreen(1)),
+                    onPressed: (() => changeScreen(2)),
                     icon: Image.asset(
                       "assets/images/user.png",
                       color: Colors.white,

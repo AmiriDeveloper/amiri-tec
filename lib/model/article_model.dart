@@ -1,5 +1,15 @@
+import 'package:tec/component/api_constant.dart';
+
 class ArticleModel {
-  String? id, title, image, catId, catName, author, view, status, createdAt;
+  String? id;
+  String? title;
+  String? image;
+  String? catId;
+  String? catName;
+  String? author;
+  String? view;
+  String? status;
+  String? createdAt;
 
   ArticleModel({
     required this.id,
@@ -16,12 +26,12 @@ class ArticleModel {
   ArticleModel.fromJson(Map<String, dynamic> element) {
     id = element["id"];
     title = element["title"];
-    image = element["image"];
+    image = ApiConstant.hostDlUrl + element["image"];
     catId = element["cat_id"];
     catName = element["cat_name"];
     author = element["view"];
     view = element["author"];
     status = element["status"];
-    createdAt = element["create_at"];
+    createdAt = element["created_at"];
   }
 }

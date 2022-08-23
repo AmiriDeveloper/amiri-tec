@@ -20,6 +20,8 @@ dependencies:
   share_plus: ^4.0.10
   url_launcher: ^6.1.5
   dio: ^4.0.6
+  cached_network_image: ^3.2.1
+  flutter_widget_from_html: ^0.8.5
 
 dev_dependencies:
   flutter_test:

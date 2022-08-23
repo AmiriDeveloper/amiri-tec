@@ -1,10 +1,11 @@
 class TagsModel {
-  String? id, title;
+  String? id;
+  String? title;
 
   TagsModel({required this.id, required this.title});
 
-  TagsModel.fromJson(Map<String, dynamic> element2) {
-    id = element2["id"];
-    title = element2["title"];
+  TagsModel.fromJson(Map<String, dynamic> element) {
+    id = element["id"];
+    title = element["title"];
   }
 }

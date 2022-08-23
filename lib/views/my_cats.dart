@@ -61,7 +61,7 @@ class _MyCatsState extends State<MyCats> {
               Padding(
                 padding: const EdgeInsets.only(top: 32),
                 child: SizedBox(
-                  width: double.infinity,
+                  width: 200,
                   height: 85,
                   child: GridView.builder(
                       physics: const ClampingScrollPhysics(),
@@ -101,7 +101,7 @@ class _MyCatsState extends State<MyCats> {
               Padding(
                 padding: const EdgeInsets.only(top: 32),
                 child: SizedBox(
-                  width: double.infinity,
+                  width: 200,
                   height: 85,
                   child: GridView.builder(
                       physics: const ClampingScrollPhysics(),

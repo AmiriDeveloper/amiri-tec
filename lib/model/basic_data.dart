@@ -1,4 +1,4 @@
-import 'fack_data.dart';
+/*import 'fack_data.dart';
 
 class BlogModel {
   int id;
@@ -189,4 +189,4 @@ List<PodcastModel> podcastList = [
           "https://static.toiimg.com/thumb/msid-31346158,width-748,height-499,resizemode=4,imgsize-114461/.jpg",
       title: " مکست",
       writer: "امیر رعوفی"),
-];
+];*/
